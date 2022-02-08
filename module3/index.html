@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button xyz = "custom attribute" class="first">Hi I am button click on me!!!</button>
+</body>
+<script>
+    console.log("Hello world!!!");
+    let body = document.querySelector("body");
+    let btn = document.querySelector("button");
+    // let attr = btn.getAttribute("xyz");
+    // console.log("xyz attribute : ",attr);
+    // console.log(btn);
+    // console.log(ele);
+    btn.style.width = "480px";
+    btn.style.height = "2rem";
+    btn.style.marginLeft = "2rem";
+    btn.style.backgroundColor = "black";
+    btn.style.color = "white";
+    //addEventlistener
+
+    btn.addEventListener("click",function(){
+        // console.log("Button is clicked");
+        let ele = document.createElement("div");
+        ele.innerHTML = "Button is clicked";
+        ele.style.margin = "2rem";
+        ele.style.marginLeft = "6rem";
+        ele.style.width = "250px";
+        ele.style.height = "1.rem";
+        ele.style.backgroundColor="black";
+        ele.style.color = "white";
+        ele.style.textAlign = "center";
+        body.appendChild(ele);
+    })
+
+    body.addEventListener("keypress",function(e){
+        console.log(e.key);
+    })
+</script>
+</html>
